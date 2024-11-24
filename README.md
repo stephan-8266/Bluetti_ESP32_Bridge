@@ -19,7 +19,7 @@ Join the Discord Server https://discord.gg/fWDSBTCVmB
   * EP500P (tested)
   * EP600 (some values still missing)
 * supported BLUETTI functions
-  * commands
+  * commands (depends on device type)
     * ac output on/off
     * dc output on/off
   * states
