@@ -162,7 +162,7 @@ void initBWifi(bool resetWifi){
   #endif
 
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
-      request->send_P(200, "text/html", index_html, processorWebsiteUpdates);
+      request->send(200, "text/html", index_html, processorWebsiteUpdates);
   });
   server.on("/switchLogging", HTTP_GET, [](AsyncWebServerRequest *request){
       msgViewerDetails = !msgViewerDetails;
@@ -172,7 +172,7 @@ void initBWifi(bool resetWifi){
       else{
         Serial.println(F("webserver BT/MQTT variable logging disabled..."));
       }
-      request->send_P(200, "text/html", index_html, processorWebsiteUpdates);
+      request->send(200, "text/html", index_html, processorWebsiteUpdates);
   });
   server.on("/rebootDevice", [](AsyncWebServerRequest *request) {
       request->send(200, "text/plain", "reboot in 2sec");
