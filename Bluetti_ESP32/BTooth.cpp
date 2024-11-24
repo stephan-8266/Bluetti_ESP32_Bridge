@@ -163,8 +163,8 @@ bool connectToServer() {
     }
 
     if(pRemoteNotifyCharacteristic->canNotify())
-      //pRemoteNotifyCharacteristic->registerForNotify(notifyCallback);
-      pRemoteCharacteristic->subscribe(true, notifyCallback); // Second argument is your notify callback
+      pRemoteNotifyCharacteristic->registerForNotify(notifyCallback);
+      //pRemoteCharacteristic->subscribe(true, notifyCallback); // Second argument is your notify callback
     connected = true;
      #ifdef RELAISMODE
       #ifdef DEBUG
